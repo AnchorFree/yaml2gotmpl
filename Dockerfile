@@ -17,4 +17,4 @@ WORKDIR /app
 RUN mkdir -p bin
 COPY --from=builder /go/src/yaml2gotmpl/bin/yaml2gotmpl bin/yaml2gotmpl
 
-ENRTYPOINT ["/app/bin/yaml2gotmpl"]
+ENTRYPOINT ["/app/bin/yaml2gotmpl"]
