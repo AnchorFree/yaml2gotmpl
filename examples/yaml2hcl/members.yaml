@@ -1,0 +1,3 @@
+members:
+  login1: "maintainer" # Admin
+  login2: "member" # some other member
