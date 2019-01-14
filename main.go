@@ -40,6 +40,10 @@ func main() {
 	var o Obj
 	var err error
 
+	if *tmpl == "" {
+		panic("Template is mandatory")
+	}
+
 	if *inFile == "" {
 		in, err = ioutil.ReadAll(os.Stdin)
 		if err != nil {
@@ -56,10 +60,6 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
-	}
-
-	if *tmpl == "" {
-		panic("Template is mandatory")
 	}
 
 	if *outFile == "" {
